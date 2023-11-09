@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<body>
+
+<div id="main_menu">
+	<div id="main_menu_background">
+		<div>
+			<h1>Kružić</h1>
+			<ul>
+				<li id="new_game" class="animacija">New game</li>
+				<li onclick="togglePopup(1)" class="animacija">Upute</li>
+				<li onclick="togglePopup(2)" class="animacija">O Projektu</li>
+			</ul>
+		</div>
+		<div id="tezina">
+			<h1>Izaberi težinu</h1>
+			<ul>
+				<li id="laski" class="animacija">Lakši</li>
+				<li id="srednji" class="animacija">Srednji</li>
+				<li id="teski" class="animacija">Teški</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="end_screen">
+	<div id="end_screen_background">
+		<h1 id="end_screen_title">Pobjedili ste</h1>
+		<ul>
+			<li id="start_button" class="animacija">Igraj ponovo</li>
+			<li id="vrati_na_main" class="animacija">Vrati na main menu</li>
+		</ul>
+		
+	</div>
+</div>
+
+<div class="popup" id="popup-1">
+	<div class="pozadina" onclick="togglePopup(1)">
+		<div class="sadrzaj">
+			<h1>Upute</h1>
+			<p>Generiše se jedan plavi kružić, u centru platna, kojeg nazivamo glavni kružić. Kretanje tog kružića kontroliše se pomjeranjem miša. Ukoliko glavni kružić dodirne manji kružić, manji kružić nestaje, a glavni kružić raste. Ukoliko glavni kružić dodirne veći kružić, igrač gubi i igra se završava. Ako glavni kružić dostigne radijus od 200, igrač pobjeđuje i igra se završava.</p>
+			<p>Također, pojavit će se i crveni kružić koji kada se pojede, desi se jedna od sljedeće 4 stvari: ○Brzina kretanja ostalih kružića se poveća duplo u narednih 1-5 sekundi ○Glavni kružić postaje duplo veći ○Glavni kružić postaje duplo manji ○Smjer kretanja slučajno generisanih kružića se mijenja.</p>
+		</div>
+	</div>
+</div>
+
+<div class="popup" id="popup-2">
+	<div class="pozadina" onclick="togglePopup(2)">
+		<div class="sadrzaj">
+			<h1>O projektu</h1>
+			<ul>
+				<li>
+					Predmet: Web Programiranje
+					<ul>
+						<li>Profesor:Prof. dr. Elmedin Selmanović</li>
+						<li>Asistent:Mr. Sead Delalić</li>
+					</ul>
+				</li>
+				<li>Studiji: TKN</li>
+				<li>Naziv projekta: Kružić</li>
+				<li>
+					Podaci o autoru:
+					<ul>
+						<li>Rijad Mutapčić</li>
+						<li>rijadmutapcic2@gmail.com</li>
+					</ul>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+
+<canvas></canvas>
+<script src="igrica.js"></script>
+</body>
+</html>

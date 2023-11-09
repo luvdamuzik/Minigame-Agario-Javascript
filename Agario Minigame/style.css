@@ -1,0 +1,165 @@
+body{
+	margin: 0px;
+	overflow: hidden;
+	font-family: "Audiowide"
+}
+
+canvas{
+	width: 100%;
+}
+
+#end_screen{
+	position:fixed;
+	display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0; 
+	align-items: center;
+	justify-content: center;
+}
+
+#main_menu{
+	position:fixed;
+	display: flex;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0; 
+	align-items: center;
+	justify-content: center;
+	background-image: url("image/background.jpg");
+}
+
+#main_menu_background{
+	background-color: black;
+	width: 50%;
+	height: 90%;
+	text-align: center; 
+	border-radius: 700px;
+}
+
+#main_menu h1{
+	color: white;
+	font-size: 40px;
+}
+
+#main_menu ul{
+	padding: 20px;
+	list-style: none;
+	color: white;
+}
+#main_menu li{
+	margin: 5px;
+	margin-bottom: 15px;
+	font-size: 30px;
+}
+
+#main_menu li:hover{
+	cursor: pointer;
+}
+
+#end_screen_background{
+	background-color: black;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	border-radius: 700px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+} 
+
+#end_screen_background ul{
+	color: white;
+    list-style: none;
+    padding: 0px;
+    font-size: 20px;
+}
+
+#end_screen_background li{
+	margin-bottom: 15px;
+}
+
+#end_screen li:hover{
+	cursor: pointer;
+}
+
+#end_screen h1{
+	color: white;
+}
+
+.animacija {
+  overflow: hidden;
+  -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animacija:hover {
+  -webkit-transform: translate(0, -8px);
+  -moz-transform: translate(0, -8px);
+  -ms-transform: translate(0, -8px);
+  -o-transform: translate(0, -8px);
+  transform: translate(0, -8px);
+
+}
+
+#tezina{
+	display: none;
+}
+
+#tezina h1{
+	color: white;
+}
+
+#tezina ul{
+	color: white; 
+	list-style: none;
+}
+
+.popup .pozadina{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .sadrzaj{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #dae3e5;
+  width: 50%;
+  height: 50%;
+  z-index: 999;
+  text-align: :center;
+  padding: 20px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.popup .sadrzaj h1{
+  text-align: center;
+}
+
+.popup .sadrzaj ul{
+  list-style: none;
+}
+
+.popup.active .pozadina{
+  display: block;
+}
+
+.popup.active.sadrzaj{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%);
+}
